@@ -1,0 +1,192 @@
+
+.container{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr 1.25fr 1.25fr auto .75fr 1fr 70px 50px;
+    /* background-color: var(--6th-color); */
+    font-family:sans-serif ;
+    text-align: center;
+    
+    grid-template-areas: 'header  header'
+                        'nav  nav'  
+                        'content1  img1'
+                        'content2  content2'
+                        'content3  content3'
+                        'propuesta propuesta'
+                        'content4  content4'
+                        'content5  content5'
+                        'content6  mailbar'
+                        'footer footer';
+}
+
+
+.css-selector {
+    background: linear-gradient(0deg, #7d9c3d, #f9e7bb);
+    background-size: 400% 400%;
+    animation: CustomAnimation 5s ease infinite;
+}
+
+@keyframes CustomAnimation {
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
+}
+
+.agumon{
+    position: fixed;
+  right: 10px; 
+  bottom: 10px; 
+  z-index: 1000;
+}
+
+.content1
+{
+    
+    grid-area: content1;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    padding: 50px;
+
+}
+
+
+.img1 
+{
+    
+    grid-area: img1;
+   
+    padding: 70px;
+}
+.img1 img
+{
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.content2
+{
+    grid-area: content2;
+}
+
+.video-frame 
+{
+border: 3px solid black; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    
+}
+
+.content3
+{
+    grid-area: content3;
+    background-image: url(Foto/back1.png);
+    padding: 5px;
+    display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+
+justify-content: space-around;
+
+align-items: flex-start;
+
+padding: 20px;
+
+flex: 1;
+}
+
+.propuesta
+{
+    grid-area: propuesta;
+    background-color: #f9f9f9; 
+    border: 2px solid #ccc; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    padding: 20px;
+    justify-self: center;
+  align-self: center;
+}
+.propuesta ul
+{
+    list-style: none;
+}
+
+.content4
+{
+    grid-area: content4;
+}
+
+.content4 img 
+{
+
+    height: auto;
+    width: 600px;
+}
+
+.tarjeta
+
+{
+
+width: 200px;
+
+background-color: #fff;
+
+border-radius: 5px;
+
+box-shadow: 15px 15px 15px rgba( 0, 0, 0,0.75);
+
+padding: 20px;
+
+text-align: center;
+
+margin-bottom: 20px;
+
+}
+
+.tarjeta img
+
+{
+
+max-width: 100%;
+
+border-radius: 5px;
+
+}
+    
+
+.content5 {
+    grid-area: content5;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 200px); 
+    gap: 0px;
+    justify-content: center; 
+    padding: 25px;
+}
+
+.content5 img {
+    width: 100%; 
+    height: auto; 
+    border: 1px solid black;
+    border-radius: 0px;
+}
+
+
+.content6
+{
+    background-color: var(--2nd-color);
+    grid-area: content6;
+    text-align: center;
+   
+   
+}
+
+.mailbar
+{
+    background-color: var(--2nd-color);
+    grid-area: mailbar;
+    
+    padding:   15px;
+    text-align: center;
+}

@@ -1,0 +1,511 @@
+.header {
+  grid-area: header;
+  padding: 5px;
+  float: left;
+  text-align: center;
+  background-color: var(--3rd-color);
+}
+
+nav {
+  grid-area: nav;
+  border: 1px solid black;
+  padding: 5px;
+  background-color: var(--2nd-color);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto 1fr 1.25fr 1.25fr auto 0.75fr 1fr 70px 50px;
+  /* background-color: var(--6th-color); */
+  font-family: sans-serif;
+  text-align: center;
+  grid-template-areas: "header  header" "nav  nav" "content1  img1" "content2  content2" "content3  content3" "propuesta propuesta" "content4  content4" "content5  content5" "content6  mailbar" "footer footer";
+}
+
+.css-selector {
+  background: linear-gradient(0deg, #7d9c3d, #f9e7bb);
+  background-size: 400% 400%;
+  animation: CustomAnimation 5s ease infinite;
+}
+
+@keyframes CustomAnimation {
+  0% {
+    background-position: 51% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 51% 0%;
+  }
+}
+.agumon {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 1000;
+}
+
+.content1 {
+  grid-area: content1;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  padding: 50px;
+}
+
+.img1 {
+  grid-area: img1;
+  padding: 70px;
+}
+
+.img1 img {
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.content2 {
+  grid-area: content2;
+}
+
+.video-frame {
+  border: 3px solid black;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.content3 {
+  grid-area: content3;
+  background-image: url(Foto/back1.png);
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+  flex: 1;
+}
+
+.propuesta {
+  grid-area: propuesta;
+  background-color: #f9f9f9;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  padding: 20px;
+  justify-self: center;
+  align-self: center;
+}
+
+.propuesta ul {
+  list-style: none;
+}
+
+.content4 {
+  grid-area: content4;
+}
+
+.content4 img {
+  height: auto;
+  width: 600px;
+}
+
+.tarjeta {
+  width: 200px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.75);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tarjeta img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.content5 {
+  grid-area: content5;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  gap: 0px;
+  justify-content: center;
+  padding: 25px;
+}
+
+.content5 img {
+  width: 100%;
+  height: auto;
+  border: 1px solid black;
+  border-radius: 0px;
+}
+
+.content6 {
+  background-color: var(--2nd-color);
+  grid-area: content6;
+  text-align: center;
+}
+
+.mailbar {
+  background-color: var(--2nd-color);
+  grid-area: mailbar;
+  padding: 15px;
+  text-align: center;
+}
+
+.container2 {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto 300px 200px auto 70px 50px;
+  font-family: sans-serif;
+  text-align: center;
+  grid-template-areas: "header header" "nav nav" "h1blog h1blog" "tablecontent blogimg1" "intro intro" "blog1 blog1" "content6 mailbar" "footer footer";
+}
+
+.h1blog {
+  grid-area: h1blog;
+}
+
+.tablecontent {
+  grid-area: tablecontent;
+  text-align: left;
+  position: relative;
+  top: 50px;
+  left: 100px;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+.tablecontent ul {
+  list-style: square;
+  text-align: left;
+}
+
+.tablecontent ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tablecontent ul li a:hover {
+  text-decoration: underline;
+  color: #555;
+}
+
+.blogimg1 {
+  grid-area: blogimg1;
+  padding: 50px;
+}
+
+.blogimg1 img {
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.intro {
+  grid-area: intro;
+  padding: 12%;
+}
+
+.blog1 {
+  grid-area: blog1;
+  text-align: left;
+  padding: 14%;
+}
+
+.container3 {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  font-family: sans-serif;
+  text-align: center;
+  grid-template-areas: "header header" "nav nav" "contactimg emailbox" "footerspace footerspace" "footer footer";
+}
+
+.contactimg {
+  grid-area: contactimg;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  position: relative;
+  top: 50px;
+  left: 100px;
+}
+
+.contactimg img {
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.emailbox {
+  grid-area: emailbox;
+  position: relative;
+  top: 50px;
+  flex: 1;
+  max-width: 500px;
+  max-height: 500px;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.emailbox h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+.footerspace {
+  grid-area: footerspace;
+  padding: 50px;
+}
+
+footer {
+  background-color: var(--5th-color);
+  grid-area: footer;
+  padding: 0px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+footer li {
+  margin: 0 10px;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+:root {
+  --1st-color: #f47e51;
+  --2nd-color: #f9e7bb;
+  --3rd-color: #7D9C3D;
+  --4th-color: #c1d82f;
+  --5th-color: #B6CF85;
+  --6th-color: #A8DADC;
+  --7th-color: #1D3557;
+}
+
+h1 {
+  color: var(--1st-color);
+}
+
+h2 {
+  color: var(--1st-color);
+}
+
+p {
+  color: black;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  color: black;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    font-family: sans-serif;
+    text-align: center;
+    grid-template-areas: "header" "nav" "content1" "img1" "content2" "content3" "content3" "content3" "content3" "propuesta" "content4" "content5" "content5" "content5" "content5" "content5" "content5" "content6" "mailbar" "footer";
+  }
+  nav ul a {
+    font-size: smaller;
+  }
+  .header {
+    text-align: center; /* Center the header text */
+    font-size: smaller;
+    padding: 10px;
+  }
+  .content1 {
+    grid-area: content1;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .video-frame {
+    width: 450px;
+  }
+  .content4 img {
+    width: 300px;
+    height: auto;
+  }
+  .content5 {
+    grid-area: content5;
+    border: 1px solid black;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: flex-start;
+  }
+  .content5 img {
+    width: 200px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  footer {
+    font-size: small;
+  }
+  .container2 {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto 70px 50px;
+    font-family: sans-serif;
+    text-align: center;
+    grid-template-areas: "header" "nav" "h1blog" "tablecontent" "blogimg1" "intro" "blog1" "content6" "mailbar" "footer";
+  }
+  .tablecontent {
+    width: 300px;
+    padding: 20px;
+    position: relative;
+    top: 10px;
+    left: 60px;
+  }
+  .container3 {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 450px 600px auto;
+    font-family: sans-serif;
+    text-align: center;
+    grid-template-areas: "header" "nav" "contactimg" "emailbox" "footerspace" "footer";
+  }
+  .emailbox {
+    width: 360px;
+    position: relative;
+    top: 100px;
+    left: 15px;
+  }
+  .contactimg {
+    width: 360px;
+    position: relative;
+    top: 20px;
+    left: 60px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

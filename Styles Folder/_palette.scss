@@ -1,0 +1,63 @@
+:root
+{
+    --1st-color: #f47e51;
+    --2nd-color: #f9e7bb;
+    --3rd-color: #7D9C3D;
+    --4th-color: #c1d82f;
+    --5th-color: #B6CF85;
+    --6th-color: #A8DADC;
+    --7th-color: #1D3557;
+}
+
+h1
+{
+    color: var(--1st-color);
+}
+h2
+{
+    color: var(--1st-color);
+}
+
+p
+{
+    color: black;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+
+    color: black;
+  }
+  
+  .flip-card-back {
+    
+    transform: rotateY(180deg);
+  }

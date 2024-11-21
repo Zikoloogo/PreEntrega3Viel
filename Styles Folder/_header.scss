@@ -1,0 +1,41 @@
+.header
+{
+    
+    grid-area: header;
+   
+    padding: 5px;
+    float: left;
+    text-align: center;
+    background-color: var(--3rd-color);
+}
+
+nav
+{
+    
+    grid-area: nav;
+    border: 1px solid black;    
+    padding: 5px;
+    background-color: var(--2nd-color);
+}
+
+nav ul
+{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+}
+
+nav li
+{
+    margin: 0 10px;
+
+}
+
+nav a
+{
+
+    text-decoration: none;
+    color: black;
+}

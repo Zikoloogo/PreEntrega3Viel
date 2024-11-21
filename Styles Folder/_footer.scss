@@ -1,0 +1,33 @@
+footer
+{
+    background-color: var(--5th-color);
+    grid-area: footer;
+    
+    padding: 0px;
+}
+
+footer ul
+{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+footer li
+{
+    margin: 0 10px;
+;
+
+}
+
+footer a
+{
+
+    text-decoration: none;
+    
+}
+
+

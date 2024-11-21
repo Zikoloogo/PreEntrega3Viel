@@ -1,0 +1,106 @@
+.container3
+ {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    font-family:sans-serif ;
+    text-align: center;
+    grid-template-areas: 'header header'
+                        'nav nav'  
+                        'contactimg emailbox'
+                        'footerspace footerspace'
+                        'footer footer';
+}
+
+.contactimg
+{
+    grid-area: contactimg;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    position: relative;
+    top: 50px;
+    left: 100px;
+}
+.contactimg img
+{
+        border: 2px solid black;
+        border-radius: 20px;
+}
+
+.emailbox
+{
+    grid-area: emailbox;
+    position: relative;
+    top: 50px;
+    flex: 1;
+    max-width: 500px;
+    max-height: 500px;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border: 2px solid #ccc; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.emailbox h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.footerspace
+{
+    grid-area: footerspace;
+    padding: 50px;
+}
+
